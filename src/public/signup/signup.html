@@ -6,7 +6,7 @@
         ng-model="SignUpCtrl.firstName"
         required
         minlength="1"
-        class="form-control">
+        class="form-control"></input>
         <span
           ng-if="(signUpForm.firstName.$error.minlength || signUpForm.firstName.$error.required) && signUpForm.firstName.$touched"
           style="color: white; background-color: red">
@@ -20,7 +20,7 @@
         ng-model="SignUpCtrl.lastName"
         required
         minlength="1"
-        class="form-control">
+        class="form-control"></input>
         <span
           ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required) && signUpForm.lastName.$touched"
           style="color: white; background-color: red">
@@ -35,7 +35,7 @@
         required
         minlength="1"
         class="form-control"
-        pattern="(\d{3})-(\d{3})-(\d{4})">
+        pattern="(\d{3})-(\d{3})-(\d{4})"></input>
         <span
           ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched"
             style="color: white; background-color: red">Invalid Phone number
@@ -48,7 +48,7 @@
         ng-model="SignUpCtrl.email"
         required
         minlength="1"
-        class="form-control">
+        class="form-control"></input>
       <span ng-if="(signUpForm.email.$invalid || signUpForm.email.$error.required) && signUpForm.email.$touched"
         style="color: white; background-color: red">Invalid email
       </span>
@@ -60,7 +60,7 @@
         ng-model="SignUpCtrl.shortName"
         required
         minlength="2"
-        class="form-control">
+        class="form-control"></input>
       <span ng-if="(signUpForm.shortName.$error.minlength || signUpForm.shortName.$error.minlength) && signUpForm.shortName.$touched"
         style="color: white; background-color: red">Come On! Invalid short-name!</span>
       <span ng-if="!SignUpCtrl.foundMessage"

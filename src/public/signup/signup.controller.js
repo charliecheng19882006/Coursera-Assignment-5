@@ -30,13 +30,11 @@
                     user.favoriteItem = data;
                     MenuService.setUser(user);
                     SignUpCtrl.foundMessage = true;
-                    SignUpCtrl.errorMessage = false;
                 })
                 .catch(function(err) {
                   user.favoriteItem = "";
                   MenuService.setUser(user);
                   SignUpCtrl.foundMessage = false;
-                  SignUpCtrl.errorMessage = true;
                 });
       SignUpCtrl.submitMessage = true;
     }
