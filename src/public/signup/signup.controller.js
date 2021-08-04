@@ -7,6 +7,11 @@
     SignUpController.$inject = ['MenuService'];
     function SignUpController(MenuService) {
         let SignUpCtrl = this;
+        var SignUpCtrl.firstName = "";
+        var SignUpCtrl.lastName = "";
+        var SignUpCtrl.email = "";
+        var SignUpCtrl.phone = "";
+        var SignUpCtrl.phone = "";
         var SignUpCtrl.foundMessage = false;
         var SignUpCtrl.errorMessage = false;
 
@@ -16,7 +21,7 @@
                 lastName: SignUpCtrl.lastName,
                 email: SignUpCtrl.email,
                 phone: SignUpCtrl.phone,
-                shortName: SignUpCtrl.shortName,
+                shortName: SignUpCtrl.phone,
                 favoriteItem: ""
               };
 
