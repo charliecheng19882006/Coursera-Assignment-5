@@ -9,7 +9,7 @@
         let SignUpCtrl = this;
         SignUpCtrl.foundMessage = false;
 
-    SignUpCtrl.submit = function(form) {
+    SignUpCtrl.submit = function(event) {
         var user = {
                 firstName: SignUpCtrl.firstName,
                 lastName: SignUpCtrl.lastName,
