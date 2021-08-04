@@ -7,12 +7,7 @@
     SignUpController.$inject = ['MenuService'];
     function SignUpController(MenuService) {
         let SignUpCtrl = this;
-        var SignUpCtrl.firstName = "";
-        var SignUpCtrl.lastName = "";
-        var SignUpCtrl.email = "";
-        var SignUpCtrl.phone = "";
-        var SignUpCtrl.phone = "";
-        var SignUpCtrl.foundMessage = false;
+        SignUpCtrl.foundMessage = false;
 
     SignUpCtrl.submit = function(form) {
         var user = {
