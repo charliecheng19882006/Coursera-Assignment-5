@@ -1,5 +1,5 @@
 <legend>Registration</legend>
-  <form class="container" name='signUpForm' novalidate>
+  <form class="container" name='signUpForm' novalidate ng-submit="SignUpCtrl.submit(signUpForm);>
     <div class="contaner">
       <label for="firstName">First name:</label>
       <input type="text" name="firstName" id="firstName" placeholder="Type in your first name !"
@@ -70,7 +70,7 @@
     <div>
       <button class="btn btn-primary pull-right"
         ng-disabled="signUpForm.$invalid"
-        ng-click="SignUpCtrl.signUp($event)">Sign up
+        type="submit"
       </button>
     </div>
     <div class="panel panel-success" ng-if="SignUpCtrl.submitMessage">

@@ -14,7 +14,7 @@
         var SignUpCtrl.phone = "";
         var SignUpCtrl.foundMessage = false;
 
-    SignUpCtrl.signUp = function(event) {
+    SignUpCtrl.submit = function(form) {
         var user = {
                 firstName: SignUpCtrl.firstName,
                 lastName: SignUpCtrl.lastName,
