@@ -24,4 +24,4 @@
     else {
       MyInfoCtrl.signedUp = false;
     }
-  }
+  }());
