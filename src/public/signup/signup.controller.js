@@ -13,7 +13,6 @@
         var SignUpCtrl.phone = "";
         var SignUpCtrl.phone = "";
         var SignUpCtrl.foundMessage = false;
-        var SignUpCtrl.errorMessage = false;
 
     SignUpCtrl.signUp = function(event) {
         var user = {
@@ -21,7 +20,7 @@
                 lastName: SignUpCtrl.lastName,
                 email: SignUpCtrl.email,
                 phone: SignUpCtrl.phone,
-                shortName: SignUpCtrl.phone,
+                shortName: SignUpCtrl.shortName,
                 favoriteItem: ""
               };
 
