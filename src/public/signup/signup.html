@@ -1,0 +1,81 @@
+<legend>Registration</legend>
+  <form class="container" name='signUpForm' novalidate>
+    <div class="contaner">
+      <label for="firstName">First name:</label>
+      <input type="text" name="firstName" id="firstName" placeholder="Type in your first name !"
+        ng-model="SignUpCtrl.firstName"
+        required
+        minlength="1"
+        class="form-control">
+        <span
+          ng-if="(signUpForm.firstName.$error.minlength || signUpForm.firstName.$error.required) && signUpForm.firstName.$touched"
+          style="color: white; background-color: red">
+          First name must be at least 1 characters long
+        </span>
+    </div>
+      <br>
+    <div class="contaner">
+      <label for="lastName">Last name:</label>
+      <input type="text" name="lastName" id="lastName" placeholder="Type in your last name !"
+        ng-model="SignUpCtrl.lastName"
+        required
+        minlength="1"
+        class="form-control">
+        <span
+          ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required) && signUpForm.lastName.$touched"
+          style="color: white; background-color: red">
+          Last name must be at least 1 characters long
+        </span>
+    </div>
+      <br>
+    <div class="container">
+      <label for="firstName">Phone number:</label>
+      <input type="phone" name="phone" id="phone" placeholder="###-###-####"
+        ng-model="SignUpCtrl.phone"
+        required
+        minlength="1"
+        class="form-control"
+        pattern="(\d{3})-(\d{3})-(\d{4})">
+        <span
+          ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched"
+            style="color: white; background-color: red">Invalid Phone number
+        </span>
+    </div>
+      <br>
+    <div class="container">
+      <label for="email">E-mail address:</label>
+      <input type="email" name="email" id="email"
+        ng-model="SignUpCtrl.email"
+        required
+        minlength="1"
+        class="form-control">
+      <span ng-if="(signUpForm.email.$invalid || signUpForm.email.$error.required) && signUpForm.email.$touched"
+        style="color: white; background-color: red">Invalid email
+      </span>
+    </div>
+      <br>
+    <div class="container">
+      <label for="shortName">ShortName:</label>
+      <input type="text" name="shortName" id="shortName" placeholder="Enter the short-name of your favorite dish!"
+        ng-model="SignUpCtrl.shortName"
+        required
+        minlength="2"
+        class="form-control">
+      <span ng-if="(signUpForm.shortName.$error.minlength || signUpForm.shortName.$error.minlength) && signUpForm.shortName.$touched"
+        style="color: white; background-color: red">Come On! Invalid short-name!</span>
+      <span ng-if="!SignUpCtrl.foundMessage"
+        style="color: white; background-color: red">Dish Not Found !!!</span>
+    </div>
+      <br>
+    <div>
+      <button class="btn btn-primary pull-right"
+        ng-disabled="signUpForm.$invalid"
+        ng-click="SignUpCtrl.signUp($event)">Sign up
+      </button>
+
+    <div class="panel panel-success" ng-if="SignUpCtrl.submitMessage">
+      <div class="panel-body" style="color: green">
+          <span>Sign up succeded!</span>
+      </div>
+    </div>
+  </form>

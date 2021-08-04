@@ -1,0 +1,26 @@
+  <div ng-if="MyInfoCtrl.signedUp" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>My information</h2>
+        <p>First name: {{ MyInfoCtrl.firstName }}</p>
+        <p>Last name: {{ MyInfoCtrl.lastName }}</p>
+        <p>E-mail address: {{ MyInfoCtrl.email }}</p>
+        <p>Phone number: {{ MyInfoCtrl.phone }}</p>
+      </div>
+      <div class="col-md-6" >
+        <<h2>Favorite Dish</h2>>
+        <div ng-if="MyInfoCtrl.favoriteItem">
+          <p>{{ MyInfoCtrl.favoriteItem.name }} [{{ myInfoCtrl.shortName }}]</p>
+          <p>{{ MyInfoCtrl.favoriteItem.description }}</p>
+        </div>
+        <div ng-show="MyInfoCtrl.noFavorite">
+          <p>No favoriate dish found</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="!MyInfoCtrl.signedUp">
+    <p>Not Signed Up Yet.</p>
+    <p><a ui-sref="public.signUp" class="btn btn-warning">Sign up Now!</a></p>
+  </div>
