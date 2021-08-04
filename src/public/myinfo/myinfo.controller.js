@@ -7,7 +7,7 @@
   MyInfoController.$inject = ['user'];
   function MyInfoController(user) {
     var MyInfoCtrl = this;
-    MyInfoCtrl.signedUp = false;
+    MyInfoCtrl.signedUp = true;
 
     if(user) {
       MyInfoCtrl.signedUp = true;
